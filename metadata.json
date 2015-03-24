@@ -1,5 +1,5 @@
 {
-  "name": "gozerhp-puppet-autossh",
+  "name": "gozerhp-autossh",
   "version": "0.0.1",
   "author": "Ricardo Carrillo Cruz",
   "summary": "Puppet module for managing autossh tunnels",
