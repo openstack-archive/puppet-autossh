@@ -17,6 +17,7 @@
 # A define to add an autossh tunnel
 define autossh::tunnel (
   $ensure              = running,
+  $user,
   $ssh_port            = '22',
   $ssh_host,
   $ssh_user,
