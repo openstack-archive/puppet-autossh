@@ -16,19 +16,20 @@
 #
 # A define to add an autossh tunnel
 define autossh::tunnel (
-  $ensure              = running,
   $user,
-  $ssh_port            = '22',
   $ssh_host,
   $ssh_user,
   $ssh_key,
-  $local_forward_args  = undef,
-  $remote_forward_args = undef,
+  $ssh_args,
+  $ensure              = running,
+  $ssh_port            = '22',
+  $monitoring_port     = 0,
+  $run_in_background   = True,
 ) {
     service { '/usr/lib/autossh':
-      ensure => $ensure,
-      start => template('autossh/autossh-command.erb'),
-      stop  => 'AUTOSSH_PID=`pidof autossh` && CHILD_PID=`pgrep -P $AUTOSSH_PID` && kill -9 $AUTOSSH_PID && kill -9 $CHILD_PID',
+      ensure   => $ensure,
+      start    => template('autossh/autossh-command.erb'),
+      stop     => 'AUTOSSH_PID=`pidof autossh` && CHILD_PID=`pgrep -P $AUTOSSH_PID` && kill -9 $AUTOSSH_PID && kill -9 $CHILD_PID',
       provider => base,
     }
 }
