@@ -22,8 +22,9 @@ define autossh::tunnel (
   $ssh_host,
   $ssh_user,
   $ssh_key,
-  $local_forward_args  = undef,
-  $remote_forward_args = undef,
+  $ssh_args,
+  $monitoring_port     = 0,
+  $run_in_background   = True,
 ) {
     service { '/usr/lib/autossh':
       ensure => $ensure,
