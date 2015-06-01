@@ -21,10 +21,10 @@ define autossh::tunnel (
   $ssh_user,
   $ssh_key,
   $ssh_args,
-  $ensure              = running,
-  $ssh_port            = '22',
-  $monitoring_port     = 0,
-  $run_in_background   = True,
+  $ensure            = running,
+  $ssh_port          = '22',
+  $monitoring_port   = 0,
+  $run_in_background = true,
 ) {
     service { '/usr/lib/autossh':
       ensure   => $ensure,
