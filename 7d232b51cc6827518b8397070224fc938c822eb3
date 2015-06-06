@@ -1,0 +1,10 @@
+Verified+2: Jenkins
+Code-Review+2: K Jonathan Harker <code@gentlydownthe.net>
+Workflow+1: Spencer Krum <nibz@spencerkrum.com>
+Code-Review+1: Timothy R. Chavez <timothy.chavez@hp.com>
+Code-Review+2: Nikki Heald <nicky@notnowlewis.com>
+Submitted-by: Jenkins
+Submitted-at: Sat, 06 Jun 2015 15:46:30 +0000
+Reviewed-on: https://review.openstack.org/187276
+Project: stackforge/puppet-autossh
+Branch: refs/heads/master
