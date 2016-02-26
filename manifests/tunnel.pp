@@ -26,8 +26,9 @@ define autossh::tunnel (
   $monitoring_port   = 0,
   $run_in_background = true,
 ) {
-    service { '/usr/lib/autossh':
+    service { "autossh-service-${title}":
       ensure   => $ensure,
+      name     => '/usr/lib/autossh',
       start    => template('autossh/autossh-command.erb'),
       stop     => 'AUTOSSH_PID=`pidof autossh` && CHILD_PID=`pgrep -P $AUTOSSH_PID` && kill -9 $AUTOSSH_PID && kill -9 $CHILD_PID',
       provider => base,
