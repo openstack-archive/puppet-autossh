@@ -15,6 +15,19 @@
 # == Define: autossh::tunnel
 #
 # A define to add an autossh tunnel
+#
+# == Parameters
+#
+#   [*user*]
+#   [*ssh_host*]
+#   [*ssh_user*]
+#   [*ssh_key*]
+#   [*ssh_args*]
+#   [*ensure*]
+#   [*ssh_port*]
+#   [*monitoring_port*]
+#   [*run_in_background*]
+#
 define autossh::tunnel (
   $user,
   $ssh_host,
