@@ -1,2 +1,3 @@
-# puppet-autossh
-Puppet module to manage autossh tunnels
+# This repo has moved to OpenDev
+
+It can now be found at [https://opendev.org/x/puppet-autossh](https://opendev.org/x/puppet-autossh)

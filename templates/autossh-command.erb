@@ -1,5 +1,0 @@
-<% if @user == 'root' %>
-/usr/lib/autossh/autossh -M <%= monitoring_port %> <% if @run_in_background %> -f <% end %> <%= @ssh_args %> -i <%= @ssh_key %> <%= @ssh_user %>@<%= @ssh_host %> -p <%= @ssh_port %>
-<% else %>
-su <%= @user %> -c '/usr/lib/autossh/autossh -M <%= monitoring_port %> <% if @run_in_background %> -f <% end %> <%= @ssh_args %> -i <%= @ssh_key %> <%= @ssh_user %>@<%= @ssh_host %> -p <%= @ssh_port %>'
-<% end %>
